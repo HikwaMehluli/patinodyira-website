@@ -1170,6 +1170,10 @@ iframe.google-map {
 	color: var(--accent-color);
 }
 
+
+
+
+
 /*--------------------------------------------------------------
 # Testimonials Section
 --------------------------------------------------------------*/
@@ -1181,12 +1185,6 @@ iframe.google-map {
 .testimonials .testimonial-item .testimonial-content {
 	border-left: 3px solid var(--accent-color);
 	padding-left: 30px;
-}
-
-.testimonials .testimonial-item .testimonial-img {
-	border-radius: 50%;
-	border: 4px solid var(--background-color);
-	margin: 0 auto;
 }
 
 .testimonials .testimonial-item h3 {
