@@ -252,7 +252,7 @@ h6 {
 
 .header .btn-getstarted,
 .header .btn-getstarted:focus {
-	color: var(--contrast-color);
+	color: var(--default-color);
 	background: var(--accent-color);
 	font-size: 14px;
 	padding: 8px 26px;
@@ -690,7 +690,7 @@ h6 {
 
 .scroll-top i {
 	font-size: 24px;
-	color: var(--contrast-color);
+	color: var(--default-color);
 	line-height: 0;
 }
 
@@ -809,7 +809,8 @@ iframe.google-map {
 	font-weight: 400;
 	padding: 0;
 	margin: 0;
-	color: color-mix(in srgb, var(--default-color), transparent 50%);
+	color: var(--default-color);
+	/* color: color-mix(in srgb, var(--default-color), transparent 50%); */
 	display: inline-block;
 	text-transform: uppercase;
 	font-family: var(--default-font);
@@ -857,7 +858,7 @@ iframe.google-map {
 }
 
 .hero .btn-get-started {
-	color: var(--contrast-color);
+	color: var(--default-color);
 	background: var(--accent-color);
 	font-weight: 400;
 	font-size: 15px;
@@ -964,7 +965,7 @@ iframe.google-map {
 }
 
 .about .fst-italic {
-	color: color-mix(in srgb, var(--default-color), var(--contrast-color) 50%);
+	color: var(--default-color);
 }
 
 .about .content ul {
@@ -1003,13 +1004,13 @@ iframe.google-map {
 # Why Us Section
 --------------------------------------------------------------*/
 .why-us .why-box {
-	color: var(--contrast-color);
+	color: var(--default-color);
 	background: var(--accent-color);
 	padding: 30px;
 }
 
 .why-us .why-box h3 {
-	color: var(--contrast-color);
+	color: var(--default-color);
 	font-family: var(--default-font);
 	font-weight: 700;
 	font-size: 34px;
@@ -1024,7 +1025,7 @@ iframe.google-map {
 	display: inline-block;
 	background: color-mix(in srgb, var(--contrast-color), transparent 70%);
 	padding: 8px 40px 10px 40px;
-	color: var(--contrast-color);
+	color: var(--default-color);
 	transition: all ease-in-out 0.4s;
 	border-radius: 50px;
 }
@@ -1552,7 +1553,7 @@ iframe.google-map {
 }
 
 .book-a-table .php-email-form button[type=submit] {
-	color: var(--contrast-color);
+	color: var(--default-color);
 	background: var(--accent-color);
 	border: 0;
 	padding: 14px 60px;
@@ -1708,7 +1709,7 @@ iframe.google-map {
 }
 
 .contact .php-email-form button[type=submit] {
-	color: var(--contrast-color);
+	color: var(--default-color);
 	background: var(--accent-color);
 	border: 0;
 	padding: 10px 30px;
