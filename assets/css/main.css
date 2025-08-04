@@ -1454,7 +1454,7 @@ iframe.google-map {
 	opacity: 0;
 	border-radius: 4px;
 	transition: 0.5s;
-	background: color-mix(in srgb, var(--background-color), transparent 60%);
+	background: color-mix(in srgb, var(--background-color), transparent 20%);
 	z-index: 2;
 }
 
