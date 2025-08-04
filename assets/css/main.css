@@ -429,12 +429,31 @@ h6 {
 /* Mobile Navigation */
 @media (max-width: 1199px) {
 	.mobile-nav-toggle {
-		color: var(--nav-color);
-		font-size: 28px;
+		color: black;
+		font-size: 40px;
 		line-height: 0;
 		margin-right: 10px;
 		cursor: pointer;
 		transition: color 0.3s;
+
+		&::before {
+			font-weight: bold !important;
+		}
+
+		/* background-color: var(--accent-color);
+		border-radius: 50%;
+		color: black;
+		display: inline-block;
+		width: 40px;
+		height: 40px;
+		cursor: pointer;
+		transition: color 0.3s;
+
+		&::before {
+			font-size: 30px;
+			font-weight: bold !important;
+			margin: 5px 0 0 5px;
+		} */
 	}
 
 	.navmenu {
