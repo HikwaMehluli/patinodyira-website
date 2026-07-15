@@ -62,6 +62,52 @@
 
 
 /*--------------------------------------------------------------
+# Button System
+--------------------------------------------------------------*/
+
+.btn {
+  display: inline-block;
+  font-weight: 400;
+  font-size: 15px;
+  letter-spacing: 1px;
+  padding: 10px 28px 12px 28px;
+  border-radius: 50px;
+  border: 0;
+  transition: 0.5s;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn-pri {
+  background: var(--accent-color);
+  color: var(--default-color);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.1);
+}
+
+.btn-pri:hover {
+  color: var(--contrast-color);
+  background: color-mix(in srgb, var(--accent-color), transparent 15%);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.1);
+}
+
+.btn-sec {
+  background: color-mix(in srgb, var(--contrast-color), transparent 70%);
+  color: var(--default-color);
+}
+
+.btn-sec:hover {
+  color: var(--accent-color);
+  background: var(--surface-color);
+}
+
+@media (max-width: 768px) {
+  .btn {
+    font-size: 13px;
+    padding: 8px 20px;
+  }
+}
+
+/*--------------------------------------------------------------
 # General Styling & Shared Classes
 --------------------------------------------------------------*/
 body {
@@ -250,29 +296,14 @@ h6 {
 	margin-right: 8px;
 }
 
-.header .btn-getstarted,
-.header .btn-getstarted:focus {
-	color: var(--default-color);
-	background: var(--accent-color);
-	font-size: 14px;
-	padding: 8px 26px;
-	margin: 0;
-	border-radius: 50px;
-	transition: 0.3s;
-}
 
-.header .btn-getstarted:hover,
-.header .btn-getstarted:focus:hover {
-	color: var(--contrast-color);
-	background: color-mix(in srgb, var(--accent-color), transparent 15%);
-}
 
 @media (max-width: 1200px) {
 	.header .logo img {
 		order: 1;
 	}
 
-	.header .btn-getstarted {
+	.header .btn {
 		order: 2;
 		margin: 0 15px 0 0;
 		padding: 6px 20px;
@@ -876,24 +907,7 @@ iframe.google-map {
 	font-weight: 400;
 }
 
-.hero .btn-get-started {
-	color: var(--default-color);
-	background: var(--accent-color);
-	font-weight: 400;
-	font-size: 15px;
-	letter-spacing: 1px;
-	display: inline-block;
-	padding: 10px 28px 12px 28px;
-	border-radius: 50px;
-	transition: 0.5s;
-	box-shadow: 0 8px 28px rgba(0, 0, 0, 0.1);
-}
 
-.hero .btn-get-started:hover {
-	color: var(--contrast-color);
-	background: color-mix(in srgb, var(--accent-color), transparent 15%);
-	box-shadow: 0 8px 28px rgba(0, 0, 0, 0.1);
-}
 
 .hero .btn-watch-video {
 	font-size: 16px;
@@ -935,7 +949,6 @@ iframe.google-map {
 		margin-bottom: 30px;
 	}
 
-	.hero .btn-get-started,
 	.hero .btn-watch-video {
 		font-size: 13px;
 	}
@@ -1040,23 +1053,7 @@ iframe.google-map {
 	margin-bottom: 30px;
 }
 
-.why-us .why-box .more-btn {
-	display: inline-block;
-	background: color-mix(in srgb, var(--contrast-color), transparent 70%);
-	padding: 8px 40px 10px 40px;
-	color: var(--default-color);
-	transition: all ease-in-out 0.4s;
-	border-radius: 50px;
-}
 
-.why-us .why-box .more-btn i {
-	font-size: 14px;
-}
-
-.why-us .why-box .more-btn:hover {
-	color: var(--accent-color);
-	background: var(--surface-color);
-}
 
 .why-us .icon-box {
 	background-color: var(--surface-color);
@@ -1577,18 +1574,7 @@ iframe.google-map {
 	color: color-mix(in srgb, var(--default-color), transparent 70%);
 }
 
-.book-a-table .php-email-form button[type=submit] {
-	color: var(--default-color);
-	background: var(--accent-color);
-	border: 0;
-	padding: 14px 60px;
-	transition: 0.4s;
-	border-radius: 4px;
-}
 
-.book-a-table .php-email-form button[type=submit]:hover {
-	background: color-mix(in srgb, var(--accent-color), transparent 20%);
-}
 
 
 
@@ -1733,15 +1719,3 @@ iframe.google-map {
 	color: color-mix(in srgb, var(--default-color), transparent 70%);
 }
 
-.contact .php-email-form button[type=submit] {
-	color: var(--default-color);
-	background: var(--accent-color);
-	border: 0;
-	padding: 10px 30px;
-	transition: 0.4s;
-	border-radius: 50px;
-}
-
-.contact .php-email-form button[type=submit]:hover {
-	background: color-mix(in srgb, var(--accent-color), transparent 20%);
-}
