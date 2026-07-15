@@ -14,12 +14,21 @@ There are no lint, test, build, typecheck, or format commands. No `package.json`
 
 ## Key directories
 
-- `assets/css/main.css` — custom styles (1,747 lines)
+- `assets/css/main.css` — custom styles (~1,720 lines)
 - `assets/js/main.js` — custom JS (168 lines)
 - `assets/js/form-handler.js` — form AJAX submission via Resend API
 - `assets/vendor/` — vendored Bootstrap, AOS, Swiper, GLightbox, PureCounter, Bootstrap Icons
 - `assets/img/` — all images (heavily image-heavy, ~4.6 MB)
 - `forms/` — PHP form handlers backed by Resend API (see below)
+
+## Button system
+
+Bootstrap-style naming in `assets/css/main.css`:
+- `.btn` — base: pill shape (50px radius), 15px font, letter-spacing, transition
+- `.btn-pri` — primary CTA: accent orange bg, dark text, box-shadow
+- `.btn-sec` — secondary: semi-transparent white bg (used on dark sections)
+- Responsive: `.btn` shrinks at `max-width: 768px`
+- Specialized buttons kept independent: `.btn-watch-video`, `.pulsating-play-btn`, `.scroll-top`
 
 ## Known issues
 
