@@ -1,0 +1,7 @@
+# OS files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Sensitive config (contains Resend API key)
+forms/config.php

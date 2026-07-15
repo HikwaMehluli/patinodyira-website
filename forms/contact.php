@@ -1,41 +1,75 @@
 <?php
-  /**
-  * Requires the "PHP Email Form" library
-  * The "PHP Email Form" library is available only in the pro version of the template
-  * The library should be uploaded to: vendor/php-email-form/php-email-form.php
-  * For more info and help: https://bootstrapmade.com/php-email-form/
-  */
+header('Content-Type: application/json');
 
-  // Replace mehlulihikwa@gmail.com with your real receiving email address
-  $receiving_email_address = 'mehlulihikwa@gmail.com';
+if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+    http_response_code(405);
+    echo json_encode(['ok' => false, 'error' => 'Method not allowed']);
+    exit;
+}
 
-  if( file_exists($php_email_form = '../assets/vendor/php-email-form/php-email-form.php' )) {
-    include( $php_email_form );
-  } else {
-    die( 'Unable to load the "PHP Email Form" Library!');
-  }
+$config = require __DIR__ . '/config.php';
 
-  $contact = new PHP_Email_Form;
-  $contact->ajax = true;
-  
-  $contact->to = $receiving_email_address;
-  $contact->from_name = $_POST['name'];
-  $contact->from_email = $_POST['email'];
-  $contact->subject = $_POST['subject'];
+$name    = trim($_POST['name'] ?? '');
+$email   = trim($_POST['email'] ?? '');
+$subject = trim($_POST['subject'] ?? '');
+$message = trim($_POST['message'] ?? '');
 
-  // Uncomment below code if you want to use SMTP to send emails. You need to enter your correct SMTP credentials
-  /*
-  $contact->smtp = array(
-    'host' => 'example.com',
-    'username' => 'example',
-    'password' => 'pass',
-    'port' => '587'
-  );
-  */
+if ($name === '' || $email === '' || $subject === '' || $message === '') {
+    http_response_code(422);
+    echo json_encode(['ok' => false, 'error' => 'All fields are required.']);
+    exit;
+}
 
-  $contact->add_message( $_POST['name'], 'From');
-  $contact->add_message( $_POST['email'], 'Email');
-  $contact->add_message( $_POST['message'], 'Message', 10);
+if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+    http_response_code(422);
+    echo json_encode(['ok' => false, 'error' => 'Please enter a valid email address.']);
+    exit;
+}
 
-  echo $contact->send();
-?>
+$html = '<h2>New Contact Form Submission</h2>'
+    . '<p><strong>Name:</strong> ' . htmlspecialchars($name) . '</p>'
+    . '<p><strong>Email:</strong> ' . htmlspecialchars($email) . '</p>'
+    . '<p><strong>Subject:</strong> ' . htmlspecialchars($subject) . '</p>'
+    . '<p><strong>Message:</strong></p>'
+    . '<p>' . nl2br(htmlspecialchars($message)) . '</p>';
+
+$payload = json_encode([
+    'from'     => $config['from_name'] . ' <' . $config['from_email'] . '>',
+    'to'       => [$config['contact_to']],
+    'reply_to' => $email,
+    'subject'  => '[Patinodyira Website] ' . $subject,
+    'html'     => $html,
+]);
+
+$ch = curl_init('https://api.resend.com/emails');
+curl_setopt_array($ch, [
+    CURLOPT_POST           => true,
+    CURLOPT_HTTPHEADER     => [
+        'Authorization: Bearer ' . $config['api_key'],
+        'Content-Type: application/json',
+    ],
+    CURLOPT_POSTFIELDS     => $payload,
+    CURLOPT_RETURNTRANSFER => true,
+    CURLOPT_TIMEOUT        => 30,
+]);
+
+$response = curl_exec($ch);
+$httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+$curlError = curl_error($ch);
+curl_close($ch);
+
+if ($curlError) {
+    http_response_code(502);
+    echo json_encode(['ok' => false, 'error' => 'Failed to connect to email service.']);
+    exit;
+}
+
+$result = json_decode($response, true);
+
+if ($httpCode >= 200 && $httpCode < 300) {
+    echo json_encode(['ok' => true]);
+} else {
+    $errorMsg = $result['message'] ?? $result['error'] ?? 'Email delivery failed. Please try again later.';
+    http_response_code(502);
+    echo json_encode(['ok' => false, 'error' => $errorMsg]);
+}
