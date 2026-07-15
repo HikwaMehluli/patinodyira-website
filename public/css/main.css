@@ -1445,21 +1445,6 @@ iframe.google-map {
     overflow: hidden;
 }
 
-.chefs .team-member .member-img:after {
-    position: absolute;
-    content: "";
-    left: -1px;
-    right: -1px;
-    bottom: -1px;
-    height: 100%;
-    background-color: var(--surface-color);
-    -webkit-mask: url("../img/team-shape.svg") no-repeat center bottom;
-    mask: url("../img/team-shape.svg") no-repeat center bottom;
-    -webkit-mask-size: contain;
-    mask-size: contain;
-    z-index: 1;
-}
-
 .chefs .team-member .social {
     position: absolute;
     right: -100%;
