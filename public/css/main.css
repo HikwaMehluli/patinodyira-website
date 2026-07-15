@@ -1,11 +1,18 @@
-/* Fonts */
+/*--------------------------------------------------------------
+    Root Styles
+--------------------------------------------------------------*/
+
 :root {
+
+    /* Smooth scroll */
+    scroll-behavior: smooth;
+
+    /* Fonts */
     --default-font: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --heading-font: "Amatic SC", sans-serif;
-}
+    
 
-/* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
-:root {
+    /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
     --background-color: #ffffff;
     /* Background color for the entire website, including individual sections */
     --default-color: #212529;
@@ -18,10 +25,9 @@
     /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
     --contrast-color: #ffffff;
     /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
-}
 
-/* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
-:root {
+
+    /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
     --nav-color: #7f7f90;
     /* The default color of the main navmenu links */
     --nav-hover-color: #FC9D24;
@@ -36,7 +42,14 @@
     /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
 }
 
-/* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
+
+
+
+
+
+/*--------------------------------------------------------------
+    Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme.
+--------------------------------------------------------------*/
 
 .light-background {
     --background-color: #f2f2f2;
@@ -50,18 +63,13 @@
     --surface-color: #37373f;
     --contrast-color: #ffffff;
 }
-
-/* Smooth scroll */
-:root {
-    scroll-behavior: smooth;
-}
-
+  
 
 
 
 
 /*--------------------------------------------------------------
-# General Styling & Shared Classes
+    General Styling & Shared Classes
 --------------------------------------------------------------*/
 body {
     color: var(--default-color);
@@ -95,7 +103,7 @@ h6 {
 
 
 /*--------------------------------------------------------------
-# Button System
+    Button System
 --------------------------------------------------------------*/
 
 .btn {
@@ -144,8 +152,10 @@ h6 {
 
 
 
-/* Pulsating Play Button
-------------------------------*/
+/*--------------------------------------------------------------
+    Pulsating Play Button
+--------------------------------------------------------------*/
+
 .pulsating-play-btn {
     width: 94px;
     height: 94px;
@@ -227,8 +237,10 @@ h6 {
 
 
 
-/* PHP Email Form Messages
-------------------------------*/
+/*--------------------------------------------------------------
+    Forms - Messages
+--------------------------------------------------------------*/
+
 .php-email-form .error-message {
     display: none;
     background: #df1529;
@@ -284,7 +296,7 @@ h6 {
 
 
 /*--------------------------------------------------------------
-# Global Header
+    Header Section
 --------------------------------------------------------------*/
 .header {
     color: var(--default-color);
@@ -297,9 +309,12 @@ h6 {
 .header .logo img {
     height: 100px;
     margin-right: 8px;
+
+    /* Removes random border browsers place after clicking on it/logo */
+    &:focus-visible {
+        outline: unset;
+    }
 }
-
-
 
 @media (max-width: 1200px) {
     .header .logo img {
@@ -326,8 +341,9 @@ h6 {
 
 
 /*--------------------------------------------------------------
-# Navigation Menu
+    Navigation Menu
 --------------------------------------------------------------*/
+
 /* Desktop Navigation */
 @media (min-width: 1200px) {
     .navmenu {
@@ -474,20 +490,20 @@ h6 {
             font-weight: bold !important;
         }
 
-        /* background-color: var(--accent-color);
+        background-color: var(--accent-color);
 		border-radius: 50%;
 		color: black;
 		display: inline-block;
-		width: 40px;
-		height: 40px;
+		width: 50px;
+		height: 50px;
 		cursor: pointer;
 		transition: color 0.3s;
 
 		&::before {
-			font-size: 30px;
+			font-size: 40px;
 			font-weight: bold !important;
 			margin: 5px 0 0 5px;
-		} */
+		}
     }
 
     .navmenu {
@@ -610,7 +626,7 @@ h6 {
 
 
 /*--------------------------------------------------------------
-# Global Footer
+    Footer Section
 --------------------------------------------------------------*/
 .footer {
     --heading-font: var(--default-font);
@@ -676,7 +692,7 @@ h6 {
 
 
 /*--------------------------------------------------------------
-# Preloader
+    Preloader
 --------------------------------------------------------------*/
 #preloader {
     position: fixed;
@@ -725,7 +741,7 @@ h6 {
 
 
 /*--------------------------------------------------------------
-# Scroll Top Button
+    Scroll Top Button
 --------------------------------------------------------------*/
 .scroll-top {
     position: fixed;
@@ -763,7 +779,7 @@ h6 {
 
 
 /*--------------------------------------------------------------
-# Disable aos animation delay on mobile devices
+    Disable aos animation delay on mobile devices
 --------------------------------------------------------------*/
 @media screen and (max-width: 768px) {
     [data-aos-delay] {
@@ -776,7 +792,7 @@ h6 {
 
 
 /*--------------------------------------------------------------
-# Global Page Titles & Breadcrumbs
+    Global Page Titles & Breadcrumbs
 --------------------------------------------------------------*/
 .page-title {
     --background-color: color-mix(in srgb, var(--default-color), transparent 96%);
@@ -821,7 +837,7 @@ h6 {
 
 
 /*--------------------------------------------------------------
-# Global Sections
+    Global Sections
 --------------------------------------------------------------*/
 section,
 .section {
@@ -849,7 +865,7 @@ iframe.google-map {
 
 
 /*--------------------------------------------------------------
-# Global Section Titles
+    Global Section Titles
 --------------------------------------------------------------*/
 .section-title {
     text-align: center;
@@ -887,7 +903,7 @@ iframe.google-map {
 
 
 /*--------------------------------------------------------------
-# Hero Section
+    Hero Section
 --------------------------------------------------------------*/
 .hero {
     width: 100%;
@@ -910,8 +926,6 @@ iframe.google-map {
     font-size: 20px;
     font-weight: 400;
 }
-
-
 
 .hero .btn-watch-video {
     font-size: 16px;
@@ -973,7 +987,7 @@ iframe.google-map {
 
 
 /*--------------------------------------------------------------
-# About Section
+    About Section
 --------------------------------------------------------------*/
 .about h3 {
     font-weight: 700;
@@ -1037,7 +1051,7 @@ iframe.google-map {
 
 
 /*--------------------------------------------------------------
-# Why Us Section
+    Why Us Section
 --------------------------------------------------------------*/
 .why-us .why-box {
     color: var(--default-color);
@@ -1104,7 +1118,7 @@ iframe.google-map {
 
 
 /*--------------------------------------------------------------
-# Stats Section
+    Stats Section
 --------------------------------------------------------------*/
 .stats {
     position: relative;
@@ -1159,7 +1173,7 @@ iframe.google-map {
 
 
 /*--------------------------------------------------------------
-# Menu Section
+    Menu Section
 --------------------------------------------------------------*/
 .menu .nav-tabs {
     border: 0;
@@ -1264,7 +1278,7 @@ iframe.google-map {
 
 
 /*--------------------------------------------------------------
-# Testimonials Section
+    Testimonials Section
 --------------------------------------------------------------*/
 .testimonials .testimonials-carousel,
 .testimonials .testimonials-slider {
@@ -1349,7 +1363,7 @@ iframe.google-map {
 
 
 /*--------------------------------------------------------------
-# Catering Section
+    Catering Section
 --------------------------------------------------------------*/
 .catering .container-fluid {
     padding: 0;
@@ -1423,7 +1437,7 @@ iframe.google-map {
 
 
 /*--------------------------------------------------------------
-# Chefs Section
+    Chefs Section
 --------------------------------------------------------------*/
 .chefs .team-member {
     background-color: var(--surface-color);
@@ -1508,7 +1522,7 @@ iframe.google-map {
 
 
 /*--------------------------------------------------------------
-# Book A Table Section
+    Book A Table Section
 --------------------------------------------------------------*/
 .book-a-table .reservation-img {
     min-height: 500px;
@@ -1570,7 +1584,7 @@ iframe.google-map {
 
 
 /*--------------------------------------------------------------
-# Gallery Section
+    Gallery Section
 --------------------------------------------------------------*/
 .gallery {
     overflow: hidden;
@@ -1622,7 +1636,7 @@ iframe.google-map {
 
 
 /*--------------------------------------------------------------
-# Contact Section
+    Contact Section
 --------------------------------------------------------------*/
 .contact .info-item {
     background-color: var(--surface-color);
