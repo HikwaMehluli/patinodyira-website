@@ -3,5 +3,7 @@
 Thumbs.db
 Desktop.ini
 
-# Sensitive config (contains Resend API key)
+# Sensitive files: config (contains Resend API key)
 forms/config.php
+ai/
+node_modules/

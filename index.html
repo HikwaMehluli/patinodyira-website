@@ -11,15 +11,14 @@
 	<link rel="icon" type="image/png" href="public/img/favicon.png" />
 
 	<!-- Fonts -->
-	<link href="https://fonts.googleapis.com" rel="preconnect">
-	<link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
 	<!-- Vendor CSS Files -->
 	<link href="public/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 	<link href="public/vendor/bootstrap-icons/bootstrap-icons.min.css" rel="stylesheet">
 	<link href="public/vendor/aos/aos.css" rel="stylesheet">
-	<link href="public/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
 	<link href="public/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 	<link href="public/css/main.css" rel="stylesheet">
 </head>
@@ -67,8 +66,9 @@
 						<p data-aos="fade-up" data-aos-delay="100">Exploring the rich and diverse culinary traditions of Africa: a journey through vibrant flavors and unique ingredients.</p>
 						<div class="d-flex" data-aos="fade-up" data-aos-delay="200">
 							<a href="#book-a-table" class="btn btn-pri">Book a Table</a>
-							<a href="https://www.youtube.com/watch?v=UY3H5a_Hi3A"
-								class="glightbox btn-watch-video d-flex align-items-center">
+							<a href="https://www.youtube.com/watch?v=rNxC16mlO60"
+								class="btn-watch-video d-flex align-items-center"
+								data-fslightbox="videos">
 								<i class="bi bi-play-circle"></i><span>Watch Video</span>
 							</a>
 						</div>
@@ -78,6 +78,7 @@
 					</div>
 				</div>
 			</div>
+
 		</section>
 		
 
@@ -108,7 +109,7 @@
 
 							<div class="position-relative mt-4">
 								<img src="public/img/video-thumbnail.webp" class="img-fluid" alt="">
-								<a href="https://www.youtube.com/watch?v=UY3H5a_Hi3A" class="glightbox pulsating-play-btn"></a>
+								<a href="https://www.youtube.com/watch?v=rNxC16mlO60" class="pulsating-play-btn" data-fslightbox="videos"></a>
 							</div>
 						</div>
 					</div>
@@ -126,7 +127,7 @@
 							<p>Our African food is special because it embodies the essence of the continent: a rich tapestry of cultures, flavors, and traditions. It is a celebration of heritage, community, and the connection between people and their land. By savoring African dishes, one experiences
 							not just unique tastes but also the history, spirit, and soul of Africa.</p>
 							<div class="text-center">
-								<a href="#chefs" class="btn btn-sec"><span>Meet our Chefs</span> <i class="bi bi-chevron-right"></i></a>
+								<a href="#chefs" class="btn btn-sec">Meet our Chefs</a>
 							</div>
 						</div>
 					</div>
@@ -229,7 +230,7 @@
 
 						<div class="row gy-5">
 							<div class="col-12 col-md-6 col-lg-4 menu-item">
-								<a href="public/img/menu/menu-item-1.webp" class="glightbox">
+								<a href="public/img/menu/menu-item-1.webp" data-fslightbox="menu">
 									<img src="public/img/menu/menu-item-1.webp" class="menu-img img-fluid" alt=""></a>
 								<h4>Sadza neNyama</h4>
 								<p class="ingredients">Sadza, Chicken, Beef, Sauce</p>
@@ -237,35 +238,35 @@
 							</div>
 
 							<div class="col-12 col-md-6 col-lg-4 menu-item">
-								<a href="public/img/menu/menu-item-2.webp" class="glightbox"><img src="public/img/menu/menu-item-2.webp" class="menu-img img-fluid" alt=""></a>
+								<a href="public/img/menu/menu-item-2.webp" data-fslightbox="menu"><img src="public/img/menu/menu-item-2.webp" class="menu-img img-fluid" alt=""></a>
 								<h4>Aut Luia</h4>
 								<p class="ingredients">Lorem, deren, trataro, filede, nerada</p>
 								<p class="price">$14.95</p>
 							</div>
 
 							<div class="col-12 col-md-6 col-lg-4 menu-item">
-								<a href="public/img/menu/menu-item-3.webp" class="glightbox"><img src="public/img/menu/menu-item-3.webp" class="menu-img img-fluid" alt=""></a>
+								<a href="public/img/menu/menu-item-3.webp" data-fslightbox="menu"><img src="public/img/menu/menu-item-3.webp" class="menu-img img-fluid" alt=""></a>
 								<h4>Est Eligendi</h4>
 								<p class="ingredients">Lorem, deren, trataro, filede, nerada</p>
 								<p class="price">$8.95</p>
 							</div>
 
 							<div class="col-12 col-md-6 col-lg-4 menu-item">
-								<a href="public/img/menu/menu-item-4.webp" class="glightbox"><img src="public/img/menu/menu-item-4.webp" class="menu-img img-fluid" alt=""></a>
+								<a href="public/img/menu/menu-item-4.webp" data-fslightbox="menu"><img src="public/img/menu/menu-item-4.webp" class="menu-img img-fluid" alt=""></a>
 								<h4>Plantain Pancakes</h4>
 								<p class="ingredients">Plantain, Spicy Maple Syrup and Peanuts</p>
 								<p class="price">$12.95</p>
 							</div>
 
 							<div class="col-12 col-md-6 col-lg-4 menu-item">
-								<a href="public/img/menu/menu-item-5.webp" class="glightbox"><img src="public/img/menu/menu-item-5.webp" class="menu-img img-fluid" alt=""></a>
+								<a href="public/img/menu/menu-item-5.webp" data-fslightbox="menu"><img src="public/img/menu/menu-item-5.webp" class="menu-img img-fluid" alt=""></a>
 								<h4>Nigerian Sprin</h4>
 								<p class="ingredients">Lorem, deren, trataro, filede, nerada</p>
 								<p class="price">$12.95</p>
 							</div>
 
 							<div class="col-12 col-md-6 col-lg-4 menu-item">
-								<a href="public/img/menu/menu-item-6.webp" class="glightbox"><img src="public/img/menu/menu-item-6.webp" class="menu-img img-fluid" alt=""></a>
+								<a href="public/img/menu/menu-item-6.webp" data-fslightbox="menu"><img src="public/img/menu/menu-item-6.webp" class="menu-img img-fluid" alt=""></a>
 								<h4>Fonio Porridge/Acha Pudding</h4>
 								<p class="ingredients">Lorem, deren, trataro, filede, nerada</p>
 								<p class="price">$9.95</p>
@@ -281,7 +282,7 @@
 
 						<div class="row gy-5">
 							<div class="col-12 col-md-6 col-lg-4 menu-item">
-								<a href="public/img/menu/menu-item-2.webp" class="glightbox"><img src="public/img/menu/menu-item-2.webp"
+								<a href="public/img/menu/menu-item-2.webp" data-fslightbox="menu"><img src="public/img/menu/menu-item-2.webp"
 										class="menu-img img-fluid" alt=""></a>
 								<h4>Aut Luia</h4>
 								<p class="ingredients">Lorem, deren, trataro, filede, nerada</p>
@@ -289,7 +290,7 @@
 							</div>
 
 							<div class="col-12 col-md-6 col-lg-4 menu-item">
-								<a href="public/img/menu/menu-item-1.webp" class="glightbox">
+								<a href="public/img/menu/menu-item-1.webp" data-fslightbox="menu">
 									<img src="public/img/menu/menu-item-1.webp" class="menu-img img-fluid" alt=""></a>
 								<h4>Sadza neNyama</h4>
 								<p class="ingredients">Sadza, Chicken, Beef, Sauce</p>
@@ -297,21 +298,21 @@
 							</div>
 
 							<div class="col-12 col-md-6 col-lg-4 menu-item">
-								<a href="public/img/menu/menu-item-7.webp" class="glightbox"><img src="public/img/menu/menu-item-7.webp" class="menu-img img-fluid" alt=""></a>
+								<a href="public/img/menu/menu-item-7.webp" data-fslightbox="menu"><img src="public/img/menu/menu-item-7.webp" class="menu-img img-fluid" alt=""></a>
 								<h4>Eos Luibusdam</h4>
 								<p class="ingredients">Lorem, deren, trataro, filede, nerada</p>
 								<p class="price">$12.95</p>
 							</div>
 							
 							<div class="col-12 col-md-6 col-lg-4 menu-item">
-								<a href="public/img/menu/menu-item-5.webp" class="glightbox"><img src="public/img/menu/menu-item-5.webp" class="menu-img img-fluid" alt=""></a>
+								<a href="public/img/menu/menu-item-5.webp" data-fslightbox="menu"><img src="public/img/menu/menu-item-5.webp" class="menu-img img-fluid" alt=""></a>
 								<h4>Nigerian Sprin</h4>
 								<p class="ingredients">Lorem, deren, trataro, filede, nerada</p>
 								<p class="price">$12.95</p>
 							</div>
 						
 							<div class="col-12 col-md-6 col-lg-4 menu-item">
-								<a href="public/img/menu/menu-item-3.webp" class="glightbox"><img src="public/img/menu/menu-item-3.webp"
+								<a href="public/img/menu/menu-item-3.webp" data-fslightbox="menu"><img src="public/img/menu/menu-item-3.webp"
 										class="menu-img img-fluid" alt=""></a>
 								<h4>Est Eligendi</h4>
 								<p class="ingredients">Lorem, deren, trataro, filede, nerada</p>
@@ -319,7 +320,7 @@
 							</div>
 
 							<div class="col-12 col-md-6 col-lg-4 menu-item">
-								<a href="public/img/menu/menu-item-6.webp" class="glightbox"><img src="public/img/menu/menu-item-6.webp"
+								<a href="public/img/menu/menu-item-6.webp" data-fslightbox="menu"><img src="public/img/menu/menu-item-6.webp"
 										class="menu-img img-fluid" alt=""></a>
 								<h4>Fonio Porridge/Acha Pudding</h4>
 								<p class="ingredients">Lorem, deren, trataro, filede, nerada</p>
@@ -337,21 +338,21 @@
 
 						<div class="row gy-5">
 							<div class="col-12 col-md-6 col-lg-4 menu-item">
-								<a href="public/img/menu/menu-item-6.webp" class="glightbox"><img src="public/img/menu/menu-item-6.webp" class="menu-img img-fluid" alt=""></a>
+								<a href="public/img/menu/menu-item-6.webp" data-fslightbox="menu"><img src="public/img/menu/menu-item-6.webp" class="menu-img img-fluid" alt=""></a>
 								<h4>Fonio Porridge/Acha Pudding</h4>
 								<p class="ingredients">Lorem, deren, trataro, filede, nerada</p>
 								<p class="price">$9.95</p>
 							</div>
 
 							<div class="col-12 col-md-6 col-lg-4 menu-item">
-								<a href="public/img/menu/menu-item-2.webp" class="glightbox"><img src="public/img/menu/menu-item-2.webp" class="menu-img img-fluid" alt=""></a>
+								<a href="public/img/menu/menu-item-2.webp" data-fslightbox="menu"><img src="public/img/menu/menu-item-2.webp" class="menu-img img-fluid" alt=""></a>
 								<h4>Aut Luia</h4>
 								<p class="ingredients">Lorem, deren, trataro, filede, nerada</p>
 								<p class="price">$14.95</p>
 							</div>
 
 							<div class="col-12 col-md-6 col-lg-4 menu-item">
-								<a href="public/img/menu/menu-item-1.webp" class="glightbox">
+								<a href="public/img/menu/menu-item-1.webp" data-fslightbox="menu">
 									<img src="public/img/menu/menu-item-1.webp" class="menu-img img-fluid" alt=""></a>
 								<h4>Sadza neNyama</h4>
 								<p class="ingredients">Sadza, Chicken, Beef, Sauce</p>
@@ -359,21 +360,21 @@
 							</div>							
 						
 							<div class="col-12 col-md-6 col-lg-4 menu-item">
-								<a href="public/img/menu/menu-item-3.webp" class="glightbox"><img src="public/img/menu/menu-item-3.webp" class="menu-img img-fluid" alt=""></a>
+								<a href="public/img/menu/menu-item-3.webp" data-fslightbox="menu"><img src="public/img/menu/menu-item-3.webp" class="menu-img img-fluid" alt=""></a>
 								<h4>Est Eligendi</h4>
 								<p class="ingredients">Lorem, deren, trataro, filede, nerada</p>
 								<p class="price">$8.95</p>
 							</div>
 						
 							<div class="col-12 col-md-6 col-lg-4 menu-item">
-								<a href="public/img/menu/menu-item-7.webp" class="glightbox"><img src="public/img/menu/menu-item-7.webp" class="menu-img img-fluid" alt=""></a>
+								<a href="public/img/menu/menu-item-7.webp" data-fslightbox="menu"><img src="public/img/menu/menu-item-7.webp" class="menu-img img-fluid" alt=""></a>
 								<h4>Eos Luibusdam</h4>
 								<p class="ingredients">Lorem, deren, trataro, filede, nerada</p>
 								<p class="price">$12.95</p>
 							</div>
 						
 							<div class="col-12 col-md-6 col-lg-4 menu-item">
-								<a href="public/img/menu/menu-item-5.webp" class="glightbox"><img src="public/img/menu/menu-item-5.webp" class="menu-img img-fluid" alt=""></a>
+								<a href="public/img/menu/menu-item-5.webp" data-fslightbox="menu"><img src="public/img/menu/menu-item-5.webp" class="menu-img img-fluid" alt=""></a>
 								<h4>Nigerian Sprin</h4>
 								<p class="ingredients">Lorem, deren, trataro, filede, nerada</p>
 								<p class="price">$12.95</p>
@@ -764,25 +765,25 @@
 					</script>
 
 					<div class="swiper-wrapper align-items-center">
-						<div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery"
+						<div class="swiper-slide"><a data-fslightbox="gallery"
 								href="public/img/gallery/gallery-1.webp"><img src="public/img/gallery/gallery-1.webp"
 									class="img-fluid" alt=""></a></div>
-						<div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery"
+						<div class="swiper-slide"><a data-fslightbox="gallery"
 								href="public/img/gallery/gallery-2.webp"><img src="public/img/gallery/gallery-2.webp"
 									class="img-fluid" alt=""></a></div>
-						<div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery"
+						<div class="swiper-slide"><a data-fslightbox="gallery"
 								href="public/img/gallery/gallery-3.webp"><img src="public/img/gallery/gallery-3.webp"
 									class="img-fluid" alt=""></a></div>
-						<div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery"
+						<div class="swiper-slide"><a data-fslightbox="gallery"
 								href="public/img/gallery/gallery-4.webp"><img src="public/img/gallery/gallery-4.webp"
 									class="img-fluid" alt=""></a></div>
-						<div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery"
+						<div class="swiper-slide"><a data-fslightbox="gallery"
 								href="public/img/gallery/gallery-5.webp"><img src="public/img/gallery/gallery-5.webp"
 									class="img-fluid" alt=""></a></div>
-						<div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery"
+						<div class="swiper-slide"><a data-fslightbox="gallery"
 								href="public/img/gallery/gallery-6.webp"><img src="public/img/gallery/gallery-6.webp"
 									class="img-fluid" alt=""></a></div>
-						<div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery"
+						<div class="swiper-slide"><a data-fslightbox="gallery"
 								href="public/img/gallery/gallery-7.webp"><img src="public/img/gallery/gallery-7.webp"
 									class="img-fluid" alt=""></a></div>
 					</div>
@@ -949,7 +950,7 @@
 	<script src="public/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 	<script src="public/js/form-handler.js"></script>
 	<script src="public/vendor/aos/aos.js"></script>
-	<script src="public/vendor/glightbox/js/glightbox.min.js"></script>
+	<script src="public/vendor/fslightbox/fslightbox.js"></script>
 	<script src="public/vendor/purecounter/purecounter_vanilla.js"></script>
 	<script src="public/vendor/swiper/swiper-bundle.min.js"></script>
 	<script src="public/js/main.js"></script>

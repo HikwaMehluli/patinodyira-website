@@ -1,0 +1,13 @@
+{
+	"name": "patinodyira-website",
+	"version": "1.0.0",
+	"description": "Exploring the rich and diverse culinary traditions of Africa: a journey through vibrant flavors and unique ingredients.",
+	"author": "Hikwa Mehluli",
+	"license": "ISC",
+	"scripts": {
+		"start": "http-server . -c-1 -o"
+	},
+	"dependencies": {
+		"http-server": "^14.1.1"
+	}
+}

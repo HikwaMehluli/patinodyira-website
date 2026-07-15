@@ -2,7 +2,6 @@
 :root {
     --default-font: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --heading-font: "Amatic SC", sans-serif;
-    /* --nav-font: "Inter", sans-serif; */
 }
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
@@ -77,11 +76,6 @@ a {
 }
 
 a:hover {
-    color: color-mix(in srgb, var(--accent-color), transparent 25%);
-    text-decoration: none;
-}
-
-a:visited {
     color: color-mix(in srgb, var(--accent-color), transparent 25%);
     text-decoration: none;
 }
@@ -366,7 +360,7 @@ h6 {
         color: var(--nav-color);
         font-size: 15px;
         padding: 0 2px;
-        font-family: var(--nav-font);
+        font-family: var(--default-font);
         font-weight: 500;
         display: flex;
         align-items: center;
@@ -521,7 +515,7 @@ h6 {
     .navmenu a:focus {
         color: var(--nav-dropdown-color);
         padding: 10px 20px;
-        font-family: var(--nav-font);
+        font-family: var(--default-font);
         font-size: 17px;
         font-weight: 500;
         display: flex;
@@ -1254,7 +1248,7 @@ iframe.google-map {
 }
 
 .menu .tab-content .menu-item .ingredients {
-    font-family: var(--nav-font);
+    font-family: var(--default-font);
     color: color-mix(in srgb, var(--default-color), transparent 50%);
     margin-bottom: 5px;
 }
