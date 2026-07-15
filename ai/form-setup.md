@@ -2,7 +2,7 @@
 
 ## Overview
 
-The contact and booking forms use the [Resend](https://resend.com) email API. PHP form handlers in `forms/` call the Resend REST API directly via cURL (no Composer required). The client-side JS (`assets/js/form-handler.js`) handles AJAX submission and UI states.
+The contact and booking forms use the [Resend](https://resend.com) email API. PHP form handlers in `forms/` call the Resend REST API directly via cURL (no Composer required). The client-side JS (`public/js/form-handler.js`) handles AJAX submission and UI states.
 
 ## Prerequisites
 
@@ -59,7 +59,7 @@ Search for "cURL" in the output. If it's not listed, contact your hosting provid
 
 ### Frontend (JS)
 
-`assets/js/form-handler.js` intercepts form submit events on all `.php-email-form` elements. It:
+`public/js/form-handler.js` intercepts form submit events on all `.php-email-form` elements. It:
 - Shows a loading spinner (`.loading` div)
 - POSTs the form data via `fetch()` to the PHP handler
 - Parses the JSON response
