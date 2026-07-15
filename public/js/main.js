@@ -82,22 +82,63 @@
 	document.addEventListener('scroll', toggleScrollTop);
 
 	/**
-	 * Animation on scroll function and init
+	 * Animation on scroll (replaces AOS library)
 	 */
 	function aosInit() {
-		AOS.init({
-			duration: 600,
-			easing: 'ease-in-out',
-			once: true,
-			mirror: false
+		const aosElements = document.querySelectorAll('[data-aos]');
+		if (!aosElements.length) return;
+
+		const aosObserver = new IntersectionObserver((entries) => {
+			entries.forEach(entry => {
+				if (entry.isIntersecting) {
+					const el = entry.target;
+					const delay = parseInt(el.getAttribute('data-aos-delay')) || 0;
+					setTimeout(() => {
+						el.classList.add('aos-animate');
+					}, delay);
+					aosObserver.unobserve(el);
+				}
+			});
+		}, { threshold: 0.1 });
+
+		aosElements.forEach(el => {
+			el.classList.add('aos-init');
+			aosObserver.observe(el);
 		});
 	}
-	window.addEventListener('load', aosInit);
+	aosInit();
 
 	/**
-	 * Initiate Pure Counter
+	 * Counter animation (replaces PureCounter library)
 	 */
-	new PureCounter();
+	function initCounters() {
+		const counters = document.querySelectorAll('.purecounter');
+		if (!counters.length) return;
+
+		const counterObserver = new IntersectionObserver((entries) => {
+			entries.forEach(entry => {
+				if (entry.isIntersecting) {
+					const el = entry.target;
+					const end = parseInt(el.getAttribute('data-purecounter-end')) || 0;
+					const duration = parseInt(el.getAttribute('data-purecounter-duration')) || 1;
+					const startTime = performance.now();
+
+					function updateCounter(currentTime) {
+						const elapsed = (currentTime - startTime) / 1000;
+						const progress = Math.min(elapsed / duration, 1);
+						const eased = 1 - Math.pow(1 - progress, 3);
+						el.textContent = Math.floor(eased * end);
+						if (progress < 1) requestAnimationFrame(updateCounter);
+					}
+					requestAnimationFrame(updateCounter);
+					counterObserver.unobserve(el);
+				}
+			});
+		}, { threshold: 0.1 });
+
+		counters.forEach(el => counterObserver.observe(el));
+	}
+	initCounters();
 
 	/**
 	 * Init swiper sliders
